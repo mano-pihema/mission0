@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 
-function Item({ subtitle, title }: { subtitle: string; title: string }) {
+function Card({ subtitle, title }: { subtitle: string; title: string }) {
   return (
     <>
       <Box
@@ -26,4 +26,4 @@ function Item({ subtitle, title }: { subtitle: string; title: string }) {
   )
 }
 
-export default Item
+export default Card
