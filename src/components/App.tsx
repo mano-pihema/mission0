@@ -19,7 +19,7 @@ function App() {
       <Container maxWidth={false} disableGutters={true}>
         <Stack direction={'column'} spacing={1}>
           <Box
-            height={{ xs: '45vh', sm: '50vh', md: '65vh', lg: '50vh' }}
+            height={{ xs: '45vh', sm: '50vh', md: '65vh', lg: '60vh' }}
             sx={{
               backgroundImage: `url('./download.jpg')`,
               backgroundSize: 'cover',
@@ -33,7 +33,7 @@ function App() {
                 padding={2}
                 sx={{
                   color: 'white',
-                  typography: { xs: 'h4', sm: 'h3', lg: 'h2' },
+                  typography: { xs: 'h4', sm: 'h3', md: 'h2', lg: 'h2' },
                 }}
               >
                 <strong>
@@ -47,7 +47,7 @@ function App() {
             <Stack
               direction={{ xs: 'column', sm: 'row' }}
               spacing={{ xs: 1, sm: 0 }}
-              paddingTop={{ xs: 3, sm: 6, md: 8 }}
+              paddingTop={{ xs: 3, sm: 6, md: 6, lg: 9 }}
               padding={2}
               display={'flex'}
               justifyContent={'center'}
