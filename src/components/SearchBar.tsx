@@ -6,7 +6,7 @@ function SearchBar() {
     <Stack
       direction={{ xs: 'column', sm: 'row' }}
       spacing={{ xs: 1, sm: 0 }}
-      paddingTop={{ xs: 3, sm: 6, md: 6, lg: 9 }}
+      paddingTop={{ xs: 3, sm: 6, md: 6, lg: 8 }}
       padding={2}
       display={'flex'}
       justifyContent={'center'}
@@ -18,7 +18,7 @@ function SearchBar() {
           borderRadius: 0,
           border: 'none',
           padding: 8,
-          minWidth: '36%',
+          minWidth: '33%',
         }}
       />
 

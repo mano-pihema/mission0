@@ -14,7 +14,7 @@ function App() {
       <Container maxWidth={false} disableGutters={true}>
         <Stack direction={'column'} spacing={1}>
           <Box
-            height={{ xs: '45vh', sm: '50vh', md: '65vh', lg: '60vh' }}
+            padding={4}
             sx={{
               backgroundImage: `url('./download.jpg')`,
               backgroundSize: 'cover',
