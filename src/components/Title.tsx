@@ -6,7 +6,7 @@ function Title() {
     <Box p={{ sm: 1, md: 4 }}>
       <Typography
         align='left'
-        padding={2}
+        padding={{ xs: 1, sm: 2 }}
         sx={{
           color: 'white',
           typography: { xs: 'h4', sm: 'h3', md: 'h2', lg: 'h2' },

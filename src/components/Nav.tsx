@@ -35,7 +35,6 @@ function Nav() {
             >
               <IconButton
                 size='large'
-                color='inherit'
                 onClick={(event) => setMenuOpen(event.currentTarget)}
               >
                 <MenuIcon />
@@ -44,27 +43,44 @@ function Nav() {
                 anchorEl={menuOpen}
                 anchorOrigin={{
                   vertical: 'bottom',
-                  horizontal: 'left',
+                  horizontal: 'right',
                 }}
                 keepMounted
                 transformOrigin={{
                   vertical: 'top',
-                  horizontal: 'left',
+                  horizontal: 'right',
                 }}
                 open={Boolean(menuOpen)}
                 onClose={() => setMenuOpen(null)}
+                PaperProps={{
+                  sx: {
+                    width: '100%',
+                    maxWidth: 'none',
+                  },
+                }}
                 sx={{
-                  display: { xs: 'block', md: 'none' },
-                  minWidth: menuOpen ? '100%' : 'auto',
+                  display: {
+                    xs: 'block',
+                    md: 'none',
+                  },
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} sx={{ minWidth: '100%' }}>
+                  <MenuItem key={page}>
                     <Box>
                       <Typography textAlign='center'>{page}</Typography>
                     </Box>
                   </MenuItem>
                 ))}
+                <MenuItem>
+                  <Button
+                    variant='outlined'
+                    size='small'
+                    sx={{ maxHeight: 30 }}
+                  >
+                    Login
+                  </Button>
+                </MenuItem>
               </Menu>
             </Box>
             {/* No Burger */}
