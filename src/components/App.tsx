@@ -2,12 +2,14 @@ import Container from '@mui/material/Container'
 import Nav from './Nav'
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
-
 import SearchBar from './SearchBar'
 import Title from './Title'
-import CardRow from './Cards'
+import CardRow from './CardRow'
+import { useState } from 'react'
 
 function App() {
+  const [search, setSearch] = useState('')
+
   return (
     <>
       <Nav />
@@ -16,15 +18,15 @@ function App() {
           <Box
             padding={4}
             sx={{
-              backgroundImage: `url('./download.jpg')`,
+              backgroundImage: `url('https://placehold.co/900x600?text=Background+Image')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
             <Title />
-            <SearchBar />
+            <SearchBar state={setSearch} />
           </Box>
-          <CardRow />
+          <CardRow search={search} />
         </Stack>
       </Container>
     </>

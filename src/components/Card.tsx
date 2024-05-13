@@ -13,9 +13,9 @@ function Card({ subtitle, title }: { subtitle: string; title: string }) {
         }}
       >
         <img
-          src='./download.jpg'
+          src={`https://placehold.co/300x200?text=${title}`}
           alt=''
-          style={{ width: '100%', height: 'auto' }}
+          style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
         />
         <Box padding={1}>
           <Typography variant='h5'>{title}</Typography>

@@ -1,7 +1,10 @@
 import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack'
+import { ChangeEvent, useState } from 'react'
 
-function SearchBar() {
+function SearchBar({ state }: { state: (value: string) => void }) {
+  const [input, setInput] = useState('')
+
   return (
     <Stack
       direction={{ xs: 'column', sm: 'row' }}
@@ -13,6 +16,9 @@ function SearchBar() {
       minWidth={'50vw'}
     >
       <input
+        onChange={(event: ChangeEvent<HTMLInputElement>) =>
+          setInput(event.target.value)
+        }
         type='text'
         style={{
           borderRadius: 0,
@@ -22,7 +28,11 @@ function SearchBar() {
         }}
       />
 
-      <Button variant='contained' sx={{ borderRadius: 0 }}>
+      <Button
+        variant='contained'
+        sx={{ borderRadius: 0 }}
+        onClick={() => state(input)}
+      >
         Search
       </Button>
     </Stack>
